@@ -1,0 +1,151 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Slightly lighter background */
+    color: #fffbfb;
+    line-height: 1.6;
+}
+
+/* Container for centering content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #007bff;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #e56000;
+}
+
+/* Main content styles */
+main {
+    padding: 40px 0;
+}
+
+/* Form styles */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    border: 1px solid #000000;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 16px;
+}
+
+/* Button styles */
+.upload-btn,
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.upload-btn:hover,
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Solution box for displaying results */
+.solution-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+
+    .upload-btn,
+    .submit-btn {
+        font-size: 14px;
+    }
+}

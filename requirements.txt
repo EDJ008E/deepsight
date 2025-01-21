@@ -1,0 +1,2 @@
+pip install torch torchvision torchaudio
+pip install tensorflow keras opencv-python matplotlib scikit-learn pandas numpy

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection </title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Deep Sight: Unveiling Digital Deception</h1>
+            <h3>Mini project</h3>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    {% if page == "home" %}
+    <main>
+        <div class="container">
+            <h2>Find the Real One</h2>
+            <p>Upload an image to check if it's real or fake.</p>
+
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="fileUpload" class="btn upload-btn">Upload Image</label>
+                <input type="file" id="fileUpload" name="file" style="display:none;">
+                <button type="button" onclick="submitFile()" class="btn submit-btn">Submit</button>
+            </form>
+
+            <div id="resultContainer" class="solution-box"></div>
+        </div>
+    </main>
+
+    {% elif page == "contact" %}
+    <main>
+        <div class="container">
+            <h2>cyber security contact</h2>
+            
+            <!-- Web3Forms Contact Form -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="847e5464-82b7-4df0-b1a4-f3d740d86378">
+
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">complaint:</label>
+                    <textarea name="message" rows="4" required></textarea>
+                </div>
+
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <button type="submit" class="btn submit-btn">Submit Form</button>
+            </form> 
+
+            {% if success %}
+                <p>Thank you, {{ name }}! Your message has been sent successfully.</p>
+            {% endif %}
+        </div>
+    </main>
+    {% endif %}
+
+    <footer>
+        <div class="container">
+            <center><p>For any complaints or concerns, feel free to reach out. We're here to assist you!</p></center>
+            <center><h4>by</h4></center>
+            <center><h4>Edwin Joel</h4></center>
+            <center><h4>dhanush</h4></center>
+            <center><h4>Dhana Vishva</h4></center>
+        </div>
+    </footer>
+
+    <script src="/static/main.js"></script> <!-- Your JS file -->
+</body>
+</html>
